@@ -5,4 +5,18 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="websites">Websites</string>
+    <string name="website1">CCSU</string>
+    <string name="website2">Admit Card</string>
+    <string name="website3">CCS Form</string>
+    <string name="website4">CCS Result</string>
+    <string name="website5">Sarkari Result</string>
+    <string name="more">more</string>
+    <string name="title_activity_bottom_navigation">BottomNavigation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">home</string>
+    <string name="ccsu_notes">CCSU Notes</string>
+    <string name="govt_exam_pre">Govt. Exam</string>
 </resources>
