@@ -2,8 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/change_course"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/change_course"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/share_notes"
+        android:orderInCategory="100"
+        android:title="@string/share_notes_with_us"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/feedback"
+        android:orderInCategory="100"
+        android:title="@string/feedback"
         app:showAsAction="never" />
 </menu>

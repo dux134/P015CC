@@ -8,26 +8,40 @@
 
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/homeScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        app:layout_constraintTop_toTopOf="parent">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                app:cardElevation="@dimen/nav_header_vertical_spacing"
-                app:layout_constraintBottom_toTopOf="@+id/slider"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="@dimen/default_dash_indicator_width"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -41,70 +55,70 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:textSize="10dp"
                         android:text="@string/websites"
+                        android:textSize="10dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/abesitImage"
+                        android:id="@+id/ccsuWebsite"
                         android:layout_width="0dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
-                        app:layout_constraintEnd_toStartOf="@+id/moodleImage"
+                        app:layout_constraintEnd_toStartOf="@+id/admitCard"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/websites"
                         app:srcCompat="@mipmap/ccu" />
 
                     <ImageView
-                        android:id="@+id/moodleImage"
+                        android:id="@+id/admitCard"
                         android:layout_width="0dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
-                        app:layout_constraintEnd_toStartOf="@+id/aktuImage"
-                        app:layout_constraintStart_toEndOf="@+id/abesitImage"
+                        app:layout_constraintEnd_toStartOf="@+id/ccsuForm"
+                        app:layout_constraintStart_toEndOf="@+id/ccsuWebsite"
                         app:layout_constraintTop_toBottomOf="@+id/websites"
                         app:srcCompat="@mipmap/admitcard"
                         tools:ignore="MissingConstraints" />
 
                     <ImageView
-                        android:id="@+id/aktuImage"
+                        android:id="@+id/ccsuForm"
                         android:layout_width="0dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
-                        app:layout_constraintEnd_toStartOf="@+id/oneviewImage"
-                        app:layout_constraintStart_toEndOf="@+id/moodleImage"
+                        app:layout_constraintEnd_toStartOf="@+id/ccsuResult"
+                        app:layout_constraintStart_toEndOf="@+id/admitCard"
                         app:layout_constraintTop_toBottomOf="@+id/websites"
                         app:srcCompat="@mipmap/webportal" />
 
                     <ImageView
-                        android:id="@+id/oneviewImage"
+                        android:id="@+id/ccsuResult"
                         android:layout_width="0dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                        app:layout_constraintStart_toEndOf="@+id/aktuImage"
+                        app:layout_constraintEnd_toStartOf="@+id/sarkariResult"
+                        app:layout_constraintStart_toEndOf="@+id/ccsuForm"
                         app:layout_constraintTop_toBottomOf="@+id/websites"
                         app:srcCompat="@mipmap/result2" />
 
                     <ImageView
                         android:id="@+id/moreImage"
                         android:layout_width="0dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintStart_toEndOf="@+id/sarkariResult"
                         app:layout_constraintTop_toBottomOf="@+id/websites"
                         app:srcCompat="@drawable/ic_more_horiz_black_24dp" />
 
@@ -112,91 +126,91 @@
                         android:id="@+id/abesitTestView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="4dp"
                         android:layout_marginTop="2dp"
-                        android:textSize="10dp"
                         android:text="@string/website1"
+                        android:textSize="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/abesitImage"
-                        app:layout_constraintStart_toStartOf="@+id/abesitImage"
-                        app:layout_constraintTop_toBottomOf="@+id/abesitImage" />
+                        app:layout_constraintEnd_toEndOf="@+id/ccsuWebsite"
+                        app:layout_constraintStart_toStartOf="@+id/ccsuWebsite"
+                        app:layout_constraintTop_toBottomOf="@+id/ccsuWebsite" />
 
                     <TextView
                         android:id="@+id/moodleTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="4dp"
                         android:layout_marginTop="2dp"
-                        android:textSize="10dp"
                         android:text="@string/website2"
+                        android:textSize="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/moodleImage"
-                        app:layout_constraintStart_toStartOf="@+id/moodleImage"
-                        app:layout_constraintTop_toBottomOf="@+id/moodleImage" />
+                        app:layout_constraintEnd_toEndOf="@+id/admitCard"
+                        app:layout_constraintStart_toStartOf="@+id/admitCard"
+                        app:layout_constraintTop_toBottomOf="@+id/admitCard" />
 
                     <TextView
                         android:id="@+id/aktuTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="4dp"
                         android:layout_marginTop="2dp"
-                        android:textSize="10dp"
                         android:text="@string/website3"
+                        android:textSize="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/aktuImage"
-                        app:layout_constraintStart_toStartOf="@+id/aktuImage"
-                        app:layout_constraintTop_toBottomOf="@+id/aktuImage" />
+                        app:layout_constraintEnd_toEndOf="@+id/ccsuForm"
+                        app:layout_constraintStart_toStartOf="@+id/ccsuForm"
+                        app:layout_constraintTop_toBottomOf="@+id/ccsuForm" />
 
                     <TextView
                         android:id="@+id/oneviewTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="4dp"
                         android:layout_marginTop="2dp"
-                        android:textSize="10dp"
                         android:text="@string/website4"
+                        android:textSize="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/oneviewImage"
-                        app:layout_constraintStart_toStartOf="@+id/oneviewImage"
-                        app:layout_constraintTop_toBottomOf="@+id/oneviewImage" />
+                        app:layout_constraintEnd_toEndOf="@+id/ccsuResult"
+                        app:layout_constraintStart_toStartOf="@+id/ccsuResult"
+                        app:layout_constraintTop_toBottomOf="@+id/ccsuResult" />
 
                     <TextView
                         android:id="@+id/moreTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="4dp"
                         android:layout_marginTop="2dp"
-                        android:textSize="10dp"
                         android:text="@string/more"
+                        android:textSize="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@+id/moreImage"
                         app:layout_constraintStart_toStartOf="@+id/moreImage"
                         app:layout_constraintTop_toBottomOf="@+id/moreImage" />
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/sarkariResult"
                         android:layout_width="0dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="4dp"
                         app:layout_constraintEnd_toStartOf="@+id/moreImage"
-                        app:layout_constraintStart_toEndOf="@+id/oneviewImage"
+                        app:layout_constraintStart_toEndOf="@+id/ccsuResult"
                         app:layout_constraintTop_toBottomOf="@+id/websites"
                         app:srcCompat="@mipmap/result" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/textView05"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="4dp"
                         android:layout_marginTop="2dp"
                         android:text="@string/website5"
                         android:textSize="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                        app:layout_constraintStart_toStartOf="@+id/imageView2"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                        app:layout_constraintEnd_toEndOf="@+id/sarkariResult"
+                        app:layout_constraintStart_toStartOf="@+id/sarkariResult"
+                        app:layout_constraintTop_toBottomOf="@+id/sarkariResult"
                         app:layout_constraintVertical_bias="0.6" />
                 </android.support.constraint.ConstraintLayout>
 
@@ -215,47 +229,232 @@
                 app:defaultIndicators="circle"
                 app:indicatorSize="8dp"
                 app:intervalSecond="5"
-                app:layout_constraintBottom_toTopOf="@+id/cardView2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView"
-                app:loopSlides="true" />
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardView2"
-                android:layout_width="0dp"
-                android:layout_height="400dp"
-                android:layout_marginBottom="32dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:cardElevation="@dimen/round_square_indicator_radius"
                 app:layout_constraintBottom_toTopOf="@+id/cardView3"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/slider">
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:loopSlides="true"
+                tools:ignore="MissingConstraints" />
 
-            </android.support.v7.widget.CardView>
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/home_view_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cardView3"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="32dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/view3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+                app:layout_constraintTop_toBottomOf="@+id/slider">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/upload_notes_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Share Notes"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/uploadnotesImageView"
+                        app:layout_constraintStart_toStartOf="@+id/uploadnotesImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/uploadnotesImageView" />
+
+                    <TextView
+                        android:id="@+id/change_course_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Change Course"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/changeCourseImageView"
+                        app:layout_constraintStart_toStartOf="@+id/changeCourseImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/changeCourseImageView" />
+
+                    <TextView
+                        android:id="@+id/feedback_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Feedback"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/feedbackImageVIew"
+                        app:layout_constraintStart_toStartOf="@+id/feedbackImageVIew"
+                        app:layout_constraintTop_toBottomOf="@+id/feedbackImageVIew" />
+
+                    <ImageView
+                        android:id="@+id/uploadnotesImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/share_notes"
+                        app:layout_constraintEnd_toStartOf="@+id/changeCourseImageView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/changeCourseImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/change_course"
+                        app:layout_constraintEnd_toStartOf="@+id/feedbackImageVIew"
+                        app:layout_constraintStart_toEndOf="@+id/uploadnotesImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/feedbackImageVIew"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/feedback"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/changeCourseImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/notification"
+                app:layout_constraintBottom_toTopOf="@+id/home_news_recyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/news_and_alerts"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                app:layout_constraintBottom_toTopOf="@+id/home_news_recyclerView"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/viewAll"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="@dimen/default_indicator_margins"
+                app:layout_constraintBottom_toTopOf="@+id/home_news_recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/view_all"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_news_recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="80dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Key Notes"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="App Version : 1.0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
                 </android.support.constraint.ConstraintLayout>
             </android.support.v7.widget.CardView>
+
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 

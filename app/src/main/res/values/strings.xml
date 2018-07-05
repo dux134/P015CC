@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">P015CC</string>
+    <string name="app_name">Key Notes</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -14,9 +14,22 @@
     <string name="more">more</string>
     <string name="title_activity_bottom_navigation">BottomNavigation</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">home</string>
     <string name="ccsu_notes">CCSU Notes</string>
     <string name="govt_exam_pre">Govt. Exam</string>
+    <string name="view_all">View All</string>
+    <string name="news_and_alerts">News And Alerts</string>
+    <string name="textview">TextView</string>
+
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="interstitial_ad_unit_id_dux">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="videos">Videos</string>
+    <string name="notes">Notes</string>
+    <string name="_2nd_year">2nd year</string>
+    <string name="_3rd_year">3rd year</string>
+    <string name="_1st_year">1st year</string>
+    <string name="change_course">Change Course</string>
+    <string name="share_notes_with_us">Share your notes</string>
+    <string name="feedback">Feedback</string>
 </resources>

@@ -6,13 +6,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.LightNoActionBar">
         <activity
-            android:name=".Dashboard"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.LightNoActionBar">
+            android:name=".SplashScreen"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,9 +18,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BottomNavigation"
-            android:label="@string/title_activity_bottom_navigation" />
-        <activity android:name=".home.MoreWebsites"></activity>
+            android:name=".home.MoreWebsites"
+            android:label="Websites" />
+        <activity
+            android:name=".home.NewsAndAlert_ViewAll"
+            android:label="News and Alert" />
+        <activity android:name=".SubjectsUnit" />
+        <activity android:name=".Dashboard" />
+        <activity
+            android:name=".govt.GovtExamSubjects"
+            android:label="Subjects" />
+        <activity android:name=".SelectCourse" />
+        <activity android:name=".SelectYear" />
+        <activity android:name=".Feedback" />
+        <activity android:name=".ShareNotes"></activity>
     </application>
 
 </manifest>
